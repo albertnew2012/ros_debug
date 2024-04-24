@@ -1,0 +1,47 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Talker",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/install/talk_listen/lib/talk_listen/talker",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build talk_listen", // Ensure the package is built before debugging
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Debug Listener",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/install/talk_listen/lib/talk_listen/listener",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build talk_listen", // Ensure the package is built before debugging
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
